@@ -1,4 +1,4 @@
-const { setHeadlessWhen } = require('@codeceptjs/configure');
+const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // HEADLESS=true npx codecept run
@@ -12,7 +12,7 @@ exports.config = {
   output: 'e2e/outputs',
   helpers: {
     Puppeteer: {
-      url: 'http://localhost:8080',
+      url: 'http://localhost:9000',
       show: true,
       windowSize: '1280x720',
     },
